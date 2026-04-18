@@ -1,21 +1,40 @@
-# 🌀 FileShrink: Universal File Compressor
+# 🗜️ FileShrink | Universal File Compressor
 
-[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io)
+FileShrink is a high-performance, secure, browser-based file optimization tool. It allows users to compress Images, PDFs, and Text files using a combination of standard libraries and custom-built algorithms.
 
-**FileShrink** is a high-performance web tool built with Streamlit that reduces the footprint of your digital life. Featuring a modern Neomorphic UI, it handles Images, PDFs, and Text files with specialized compression algorithms.
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 
 ## 🚀 Features
-- **🖼️ Image Optimization:** Lossy JPEG compression via Pillow (Quality: 30).
-- **📄 PDF Stream Compression:** Internal content stream optimization via PyPDF2.
-- **🗜️ Archive Compression:** Deflate-based ZIP archiving for TXT and CSV files.
-- **🎨 Neomorphic UI:** Soft-UI aesthetics with full light/dark mode support.
 
-## 🛠️ Installation & Usage
-1. Clone the repo: `git clone https://github.com/shreyasshah707/FileShrink.git`
-2. Install requirements: `pip install -r requirements.txt`
-3. Run the app: `streamlit run app.py`
+- **🖼️ Image Optimization:** Uses lossy compression logic to reduce JPEG/PNG sizes by up to 80% while maintaining visual clarity.
+- **📄 PDF Structural Compression:** Optimizes internal content streams and removes redundant structures within PDF documents.
+- **📊 Text Analysis & ZIP:** A deep-dive compression module that analyzes word frequencies and calculates theoretical compression ratios.
+- **🔒 Privacy First:** All processing happens in-memory within your browser. No files are ever uploaded to a server or stored permanently.
 
-## 📂 Project Structure
-- `app.py`: Streamlit frontend and UI styling.
-- `compressor.py`: Core compression logic and processing.
+## 🧠 Technical Implementation
+
+This project was built to demonstrate core Computer Science fundamentals:
+
+### 1. Custom Merge Sort
+The Text & CSV module utilizes a manual implementation of the **Merge Sort** algorithm to sort word frequencies. This ensures an $O(n \log n)$ time complexity for dictionary generation, making it efficient even for larger text files.
+
+
+
+### 2. Data Analysis with NumPy
+We utilize **NumPy** to process text data at scale, specifically:
+- Converting word lengths into multi-dimensional arrays.
+- Calculating statistical means of word distributions to determine file "density."
+
+### 3. Expected Compression Ratio
+The app calculates a "Theoretical Dictionary Compression" value. This logic simulates how **Huffman Coding** works by identifying the top 10 most frequent words and calculating the bytes saved if replaced by 1-byte pointers.
+
+
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/shreyasshah707/FileShrink.git](https://github.com/shreyasshah707/FileShrink.git)
+   cd FileShrink
