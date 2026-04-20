@@ -5,7 +5,7 @@ st.set_page_config(page_title="FileShrink", page_icon="🗜️", layout="centere
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.title("📂 Navigation")
+    st.title("Navigation")
     mode = st.radio("File Type:", ["Images", "PDFs", "Text Files", "CSVs"])
     if mode == "Images":
         quality = st.slider("Quality", 10, 90, 30)
@@ -29,7 +29,7 @@ def welcome(name):
     st.divider()
 
 # --- MAIN LOGIC ---
-st.title("FileShrink")
+st.title("📂FileShrink")
 
 if mode == "Images":
     f = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"])
